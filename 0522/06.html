@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function power(x, n) {
-            let result = 1;
-
-            for(let i=0; i<n; i++) {
-                result *= x;
+        function callTenTimes(callback) {
+            for(let i=0; i<10; i++) {
+                callback()
             }
-
-            return result;
         }
 
-        alert("3의 10승: " + power(3, 10));
-        alert("3의 5승: " + power(3, 5));
+        // let fun = function() {
+        //         alert("Hello");
+        // }
+        callTenTimes(function(){
+            alert("Hello");
+        });
+
     </script>
 </head>
 <body>
