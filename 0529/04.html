@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let img;
+        let imgSrc;
+
+        function changeImage() {
+            img = document.getElementById("img");
+            imgSrc = document.getElementById("imgSrc").value;
+            img.src = imgSrc;
+
+            img.width = 600;
+        }
+
+        function reset() {
+            img = document.getElementById("img");
+            imgSrc = "";
+            img.src = imgSrc;
+            img.width = 0;
+        }
+
+        function yummy() {
+            document.body.setAttribute("data-yummy", "yummy");
+            alert(document.body.getAttribute("data-yummy"));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeImage()">show</button>
+    <button onclick="reset()">reset</button>
+    <button onclick="yummy()">yummy</button>
+    <br>
+    <select name="" id="imgSrc">
+        <option value="">Select an image</option>
+        <option value="./imgs/김찌.png">김치찌개</option>
+        <option value="./imgs/파스타.png">파스타</option>
+        <option value="./imgs/쿠키.png">쿠키</option>
+    </select>
+    <hr>
+    <img id="img">
+</body>
+</html>
