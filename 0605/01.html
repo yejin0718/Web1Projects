@@ -22,13 +22,27 @@
         function outImage(img1) {
             img1.src = "imgs/쿠키.png";
         }
+
+        function increamentStar(btn) {
+            btn.textContent = btn.textContent + "*";
+        }
+
+        function removeDefault() {
+            event.preventDefault();
+        }
     </script>
 </head>
 <body>
+    <a href="../0529/04.html" onclick="removeDefault()">자바스크립트 연습</a>
+    <br><br>
     <button onclick="callAlert()">알림메세지</button>
+    <br><br>
+    <button onclick="increamentStar(this)">버튼</button>
     <br><br>
     <img id="img" src="imgs/김찌.png" alt="" onmouseover="this.src='imgs/쿠키.png'" onmouseout="this.src='imgs/파스타.png'">
     <br><br>
     <img id="img" src="imgs/파스타.png" alt="" onmouseover="this.src='imgs/김찌.png'" onmouseout="this.src='imgs/쿠키.png'">
+    <br><br>
+    <img id="img" src="imgs/쿠키.png" alt="" onmouseover="this.src='imgs/김찌.png'" onmouseout="this.src='imgs/쿠키.png'">
 </body>
 </html>
