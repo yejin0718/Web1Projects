@@ -27,9 +27,21 @@
             document.body.setAttribute("data-yummy", "yummy");
             alert(document.body.getAttribute("data-yummy"));
         }
+
+        let clock;
+        function callSetClock() {
+            clock = document.querySelector("h1");
+            setClock();
+            setInterval(setClock, 1000);
+        }
+
+        function setClock() {
+            let now = new Date();
+            clock.innerHTML = now.toString();
+        }
     </script>
 </head>
-<body>
+<body onload="callSetClock();">
     <button onclick="changeImage()">show</button>
     <button onclick="reset()">reset</button>
     <button onclick="yummy()">yummy</button>
@@ -42,5 +54,8 @@
     </select>
     <hr>
     <img id="img">
+    <hr>
+    <h1></h1>
+    <hr>
 </body>
 </html>
