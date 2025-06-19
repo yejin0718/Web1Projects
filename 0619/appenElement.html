@@ -6,16 +6,24 @@
     <title>Document</title>
     <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-        $(document).ready(function(){
-            for(let i=0; i<10; i++) {
-                $('<h1>New Create Element '+ i+'</h1>').css({
+        // $(document).ready(function(){
+        //     for(let i=0; i<10; i++) {
+        //         $('<h1>New Create Element '+ i+'</h1>').css({
+        //             backgroundColor: 'black',
+        //             color: 'red'
+        //         }).appendTo('body');
+        //     }
+        // });
+
+        function addH1(){
+            $('<h1>New Create Element </h1>').css({
                     backgroundColor: 'black',
                     color: 'red'
                 }).appendTo('body');
-            }
-        });
+        }
     </script>
 </head>
 <body>
+    <button onclick="addH1()"></button>
 </body>
 </html>
